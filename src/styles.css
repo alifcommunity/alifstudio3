@@ -1,4 +1,14 @@
 .main-editor-container {
+  padding: 0 !important;
   height: 100%;
   display: grid; /* to make the child, the editor itself, take the full space */
+  max-height: calc(100% - 123px);
+}
+
+.footer .container-fluid {
+  display: flex !important;
+}
+
+.footer .pull-right ul {
+  display: flex !important;
 }
