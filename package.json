@@ -1,0 +1,27 @@
+{
+  "name": "alifstudio3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:alifcommunity/alifstudio3.git",
+  "author": "Alif community",
+  "license": "GPL-3",
+  "scripts": {
+    "watch": "parcel ./src/index.js --global ألف",
+    "build": "parcel build ./src/index.js --global ألف"
+  },
+  "dependencies": {
+    "@codemirror/basic-setup": "^0.18.2",
+    "@codemirror/commands": "^0.18.3",
+    "@codemirror/gutter": "^0.18.4",
+    "@codemirror/highlight": "^0.18.4",
+    "@codemirror/history": "^0.18.1",
+    "@codemirror/lang-javascript": "^0.18.0",
+    "@codemirror/legacy-modes": "^0.18.1",
+    "@codemirror/stream-parser": "^0.18.2",
+    "@codemirror/theme-one-dark": "^0.18.1",
+    "@codemirror/view": "^0.18.17"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

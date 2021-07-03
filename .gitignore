@@ -1,22 +1,21 @@
 # http://www.gnu.org/software/automake
 
 Makefile.in
-/ar-lib
-/mdate-sh
-/py-compile
-/test-driver
-/ylwrap
+ar-lib
+mdate-sh
+py-compile
+test-driver
+ylwrap
+
+*.log
 
 # http://www.gnu.org/software/autoconf
 
 autom4te.cache
-/autoscan.log
-/autoscan-*.log
 /aclocal.m4
 /compile
 /config.guess
 /config.h.in
-/config.log
 /config.status
 /config.sub
 /configure
@@ -47,3 +46,7 @@ m4/lt~obsolete.m4
 # can automatically generate from config.status script
 # (which is called by configure script))
 Makefile
+
+node_modules/
+dist/
+.cache/

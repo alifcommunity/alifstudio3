@@ -1,0 +1,4 @@
+.main-editor-container {
+  height: 100%;
+  display: grid; /* to make the child, the editor itself, take the full space */
+}
