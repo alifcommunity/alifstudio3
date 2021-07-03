@@ -26,7 +26,7 @@ class AlifCodemirrorEditor_V6 extends EditorView {
         doc: value,
         extensions: [
           basicSetup,
-          // oneDark,
+          oneDark,
           keymap.of([defaultTabBinding]),
           lineNumbers({ formatNumber: (lineNo) => toArNum(lineNo) }),
           // javascript(),
