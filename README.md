@@ -6,15 +6,16 @@
 ## للتشغيل محليا
 
 1. تنصيب الاعتماديات عن طريق تنفيذ `yarn`
-2. بناء الأكواد اللازمة، والمستخدمة في <span dir=ltr><code>./index.html</code></span>
+2. بناء الأكواد اللازمة، والمستخدمة في <span dir=ltr><code>./index.html</code></span> عن طريق `yarn build`
 3. بناء بيئة التطوير عن طريق مترجم ألف
 4. تشغيل الملف الناتج
-
+5. كما يمكن للتسهيل المشاهدة وإعادة البناء تلقائيا من خلال `yarn watch`
+  
 <div dir=ltr>
 
 ```
 yarn
-yarn build
+yarn watch
 alif alifstudio.alif
 ./alifstudio
 ```
