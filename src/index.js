@@ -40,7 +40,7 @@ class AlifCodemirrorEditor_V6 extends EditorView {
   setCode(code) {
     const length = this.state.doc.length;
     const transaction = this.state.update({
-      changes: { from: 0, to: length - 1, insert: code },
+      changes: { from: 0, to: length ? length -1 : 0, insert: code },
     });
     this.dispatch(transaction);
   }
