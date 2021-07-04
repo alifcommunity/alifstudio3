@@ -26,6 +26,7 @@ alif alifstudio.alif
 <div dir=ltr>
   
 ```
+cd alifstudio_data
 yarn
 yarn build
 yarn watch --no-hmr
