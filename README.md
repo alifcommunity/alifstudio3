@@ -19,7 +19,7 @@ alif alifstudio.alif
 ## لمطوري الويب (الواجهة)
 
 1. تنصيب الاعتماديات عن طريق تنفيذ `yarn`
-2. بناء الأكواد اللازمة، والمستخدمة في <span dir=ltr><code>./index.html</code></span> عن طريق `yarn build`
+2. بناء الأكواد اللازمة، والمستخدمة في <span dir=ltr><code>index.html</code></span> عن طريق `yarn build`
 3. كما يمكن للتسهيل المشاهدة وإعادة البناء تلقائيا من خلال `yarn watch --no-hmr`
 </div>
 
