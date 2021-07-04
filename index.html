@@ -7,34 +7,25 @@
 
     <title>ألف ستوديو 3</title>
 
-    <meta
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-      name="viewport"
-    />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <meta name="viewport" content="width=device-width" />
 
-    <!-- Bootstrap core CSS     -->
+    <!-- Bootstrap core CSS -->
     <link href="alifstudio_data/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Bootstrap RTL core CSS     -->
+    <!-- Bootstrap RTL core CSS -->
     <link href="alifstudio_data/css/bootstrap-rtl.min.css" rel="stylesheet" />
 
-    <!-- Animation library for notifications   -->
+    <!-- Animation library for notifications -->
     <link href="alifstudio_data/css/animate.min.css" rel="stylesheet" />
 
-    <!--  Light Bootstrap Table core CSS    -->
-    <link
-      href="alifstudio_data/css/light-bootstrap-dashboard.css"
-      rel="stylesheet"
-    />
+    <!--  Light Bootstrap Table core CSS -->
+    <link href="alifstudio_data/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
 
-    <!--  Light Bootstrap RTL Version CSS    -->
-    <link
-      href="alifstudio_data/css/light-bootstrap-dashboard-rtl.css"
-      rel="stylesheet"
-    />
+    <!--  Light Bootstrap RTL Version CSS -->
+    <link href="alifstudio_data/css/light-bootstrap-dashboard-rtl.css" rel="stylesheet"/>
 
-    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <!--  CSS for Demo Purpose, don't include it in your project -->
     <link href="alifstudio_data/css/demo.css" rel="stylesheet" />
 
     <!--     Fonts and icons     -->
@@ -51,20 +42,14 @@
     />
     <link href="alifstudio_data/css/pe-icon-7-stroke.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="./dist/index.css">
+    <link rel="stylesheet" href="alifstudio_data/dist/index.css">
   </head>
   <body>
     <div class="wrapper">
-      <div
-        class="sidebar"
-        data-color="green"
-        data-image="alifstudio_data/img/sidebar-5.jpg"
-      >
+      <div class="sidebar" data-color="green" data-image="alifstudio_data/img/sidebar-5.jpg">
         <!--
-    
             Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
             Tip 2: you can also add an image using data-image tag
-    
         -->
 
         <div class="sidebar-wrapper">
@@ -110,8 +95,7 @@
                 type="button"
                 class="navbar-toggle"
                 data-toggle="collapse"
-                data-target="#navigation-example-2"
-              >
+                data-target="#navigation-example-2">
                 <span class="sr-only">XXXXXXXXX</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -125,8 +109,7 @@
                   <a
                     href="javascript:;"
                     class="dropdown-toggle"
-                    data-toggle="dropdown"
-                  >
+                    data-toggle="dropdown">
                     إعدادات
                     <b class="caret"></b>
                   </a>
@@ -143,7 +126,7 @@
           </div>
         </nav>
 
-        <div class="main-editor-container content">
+        <div class="main-editor-container content" id="alifeditor">
         </div>
 
         <footer class="footer">
@@ -169,14 +152,8 @@
     </div>
     <!--   Core JS Files   -->
     <!-- <script src="alifstudio_data/js/jquery-1.10.2.js" type="text/javascript"></script> -->
-    <script
-      src="alifstudio_data/js/jquery-3.6.0.min.js"
-      type="text/javascript"
-    ></script>
-    <script
-      src="alifstudio_data/js/bootstrap.min.js"
-      type="text/javascript"
-    ></script>
+    <script src="alifstudio_data/js/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="alifstudio_data/js/bootstrap.min.js" type="text/javascript"></script>
 
     <!--  Checkbox, Radio & Switch Plugins -->
     <script src="alifstudio_data/js/bootstrap-checkbox-radio-switch.js"></script>
@@ -211,13 +188,14 @@
           } else alert("Failed to get the WebUI Core link.");
         }
       });
-
+      // Callbacks
       function webui_ready() {
+
         // WebUI is ready
         webui_debug(true);
       }
     </script>
     <!-- ------------------------------------------------------------ -->
-    <script src="./dist/index.js"></script>
+    <script src="alifstudio_data/dist/index.js"></script>
   </body>
 </html>

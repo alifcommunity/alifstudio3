@@ -50,3 +50,5 @@ Makefile
 node_modules/
 dist/
 .cache/
+
+*.exe
