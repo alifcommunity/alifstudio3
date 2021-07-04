@@ -45,28 +45,26 @@ class AlifCodemirrorEditor_V6 extends EditorView {
     this.dispatch(transaction);
   }
 
-  // getValue(){
-  //   return this.getValue();
-  // }
+  getCode(){
+    return this.state.doc.toString();
+  }
 }
 
 const parent = document.querySelector(".main-editor-container"); // get by ID is faster?
 const editor = new AlifCodemirrorEditor_V6({ parent });
 
 export function أضف_كود_64(codeBase64) {
-  
   // Base64 to UTF8
-  editor.setCode(decodeURIComponent(escape(window.atob( codeBase64 ))));
+  editor.setCode(decodeURIComponent(escape(atob(codeBase64))));
 }
 
 export function أضف_كود(code) {
-  
   // UTF8
   editor.setCode(code);
 }
 
 export function قرأة_كود() {
-  
   // Read
-  return editor.getValue();
+  return editor.getCode();
 }
+
