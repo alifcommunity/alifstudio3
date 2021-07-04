@@ -16,7 +16,7 @@ alif alifstudio.alif
 
 <div dir="rtl">
   
-## لمطوري الويب و الواجهة
+## لمطوري الويب (الواجهة)
 
 1. تنصيب الاعتماديات عن طريق تنفيذ `yarn`
 2. بناء الأكواد اللازمة، والمستخدمة في <span dir=ltr><code>./index.html</code></span> عن طريق `yarn build`
