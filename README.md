@@ -7,6 +7,7 @@
 </div>
 
 <div dir=ltr>
+  
 ```
 alif alifstudio.alif
 ./alifstudio
@@ -14,6 +15,7 @@ alif alifstudio.alif
 </div>
 
 <div dir="rtl">
+  
 ## لمطوري الويب و الواجهة
 
 1. تنصيب الاعتماديات عن طريق تنفيذ `yarn`
@@ -22,6 +24,7 @@ alif alifstudio.alif
 </div>
 
 <div dir=ltr>
+  
 ```
 yarn
 yarn build
