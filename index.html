@@ -101,7 +101,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="javascript:;">[File Name]</a>
+              <a class="navbar-brand" href="javascript:;" id="id_filename">[File Name]</a>
             </div>
             <div class="collapse navbar-collapse">
               <ul class="nav navbar-nav navbar-left">
@@ -134,13 +134,7 @@
             <nav class="pull-right">
               <ul>
                 <li>
-                  <a href="javascript:;"> معلومة 1 </a>
-                </li>
-                <li>
-                  <a href="javascript:;"> معلومة 2 </a>
-                </li>
-                <li>
-                  <a href="javascript:;"> معلومة 3 </a>
+                  <a href="javascript:;" id="id_debug"></a>
                 </li>
               </ul>
             </nav>
@@ -192,10 +186,36 @@
       function webui_ready() {
 
         // WebUI is ready
-        webui_debug(true);
+        webui_debug(false);
       }
     </script>
     <!-- ------------------------------------------------------------ -->
     <script src="alifstudio_data/dist/index.js"></script>
+
+    <script type="text/javascript">
+
+      function alif_code_OnChange() {
+
+        // CodeMirror OnChange
+        webui_event("ثم_تغيير");
+      }
+
+      function alif_debug(message) {
+
+        document.getElementById("id_debug").innerHTML = '<strong>' + message + '</strong>';
+      }
+
+      function alif_set_file_name(name) {
+
+        document.getElementById("id_filename").innerHTML = name;
+      }
+
+      function alif_debug_json(debug_json) {
+
+        const debug_r = JSON.parse(debug_json);
+        document.getElementById("id_debug").innerHTML = '<strong>السطر ' + debug_r.line + ':</strong> ' + debug_r.msg;
+        ألف.خطأ(debug_r.line, debug_r.msg);
+      }
+  </script>
   </body>
 </html>

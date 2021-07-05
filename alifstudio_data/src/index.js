@@ -20,7 +20,6 @@ function toArNum(num) {
 class AlifCodemirrorEditor_V6 extends EditorView {
   constructor(options) {
     let { parent, value } = options;
-
     super({
       state: EditorState.create({
         doc: value,
@@ -29,8 +28,17 @@ class AlifCodemirrorEditor_V6 extends EditorView {
           oneDark,
           keymap.of([defaultTabBinding]),
           lineNumbers({ formatNumber: (lineNo) => toArNum(lineNo) }),
-          // javascript(),
           StreamLanguage.define(simpleMode(alifSimpleModeStates)),
+          EditorView.updateListener.of((update) => {
+            if (update.docChanged) {
+              // KeyUp
+              if (typeof alif_code_OnChange === "function")
+                setTimeout(alif_code_OnChange, 0);
+            } else {
+              // Mouse Click
+              // ...
+            }
+          }),
         ],
       }),
       parent,
@@ -38,14 +46,17 @@ class AlifCodemirrorEditor_V6 extends EditorView {
   }
 
   setCode(code) {
-    const length = this.state.doc.length;
     const transaction = this.state.update({
-      changes: { from: 0, to: length ? length -1 : 0, insert: code },
+      changes: {
+        from: 0,
+        to: this.state.doc.length,
+        insert: code,
+      },
     });
     this.dispatch(transaction);
   }
 
-  getCode(){
+  getCode() {
     return this.state.doc.toString();
   }
 }
@@ -55,16 +66,26 @@ const editor = new AlifCodemirrorEditor_V6({ parent });
 
 export function أضف_كود_64(codeBase64) {
   // Base64 to UTF8
-  editor.setCode(decodeURIComponent(escape(atob(codeBase64))));
+  let code = decodeURIComponent(escape(window.atob(codeBase64.trim())));
+  code = code.replace(/\r/g, ""); // Remove all 0x0D [\r]
+  editor.setCode(code.trim());
 }
 
 export function أضف_كود(code) {
   // UTF8
-  editor.setCode(code);
+  code = code.replace(/\r/g, ""); // Remove all 0x0D [\r]
+  editor.setCode(code.trim());
 }
 
 export function قرأة_كود() {
   // Read
-  return editor.getCode();
+  let code = editor.getCode();
+  code = code.replace(/\r/g, ""); // Remove all 0x0D [\r]
+  return code;
 }
 
+export function خطأ(line_number, error_description) {
+  // Show an error in Codemirror
+  // Link: https://codemirror.net/6/docs/migration/
+  // Section: Marked Text
+}
