@@ -6,8 +6,8 @@
   "author": "Alif community",
   "license": "GPL-3",
   "scripts": {
-    "watch": "parcel watch build ./src/index.js --global ألف",
-    "build": "parcel build ./src/index.js --global ألف"
+    "watch": "parcel watch build ./src/index.js --global ألف --public-url ./",
+    "build": "parcel build ./src/index.js --global ألف --public-url ./"
   },
   "dependencies": {
     "@codemirror/basic-setup": "^0.18.2",

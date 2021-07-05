@@ -12,3 +12,23 @@
 .footer .pull-right ul {
   display: flex !important;
 }
+
+.alif-code-error {
+  text-decoration: underline wavy;
+  color: red;
+  position: relative;
+}
+
+.alif-code-error:hover::after {
+  content: attr(data-error-message);
+  display: none;
+  background: black;
+  color: white;
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
+
+.alif-code-error:hover::after {
+  display: block;
+}

@@ -168,7 +168,7 @@
     <!-- <script src="alifstudio_data/js/demo.js"></script> -->
 
     <!-- WebUI Core ---------------------------------------------------->
-    <script type="text/javascript">
+    <script>
       document.addEventListener("DOMContentLoaded", function (event) {
         if (typeof _webui_ws === "undefined") {
           let webui_searchParams = new URLSearchParams(window.location.search);
@@ -191,14 +191,8 @@
     </script>
     <!-- ------------------------------------------------------------ -->
     <script src="alifstudio_data/dist/index.js"></script>
-
-    <script type="text/javascript">
-
-      function alif_code_OnChange() {
-
-        // CodeMirror OnChange
-        webui_event("ثم_تغيير");
-      }
+    
+    <script>
 
       function alif_debug(message) {
 
@@ -216,6 +210,9 @@
         document.getElementById("id_debug").innerHTML = '<strong>السطر ' + debug_r.line + ':</strong> ' + debug_r.msg;
         ألف.خطأ(debug_r.line, debug_r.msg);
       }
+      
   </script>
+
+
   </body>
 </html>
