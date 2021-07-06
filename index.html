@@ -208,7 +208,14 @@
 
         const debug_r = JSON.parse(debug_json);
         document.getElementById("id_debug").innerHTML = '<strong>السطر ' + debug_r.line + ':</strong> ' + debug_r.msg;
+
         ألف.خطأ(debug_r.line, debug_r.msg);
+      }
+
+      function alif_code_OnChange() {
+        
+        // CodeMirror OnChange event
+        webui_event("ثم_تغيير");
       }
       
   </script>
