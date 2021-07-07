@@ -1,8 +1,17 @@
+.main-panel {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
 .main-editor-container {
   padding: 0 !important;
+}
+
+.main-editor-container > div {
+  position: absolute;
+  width: 100%;
+
   height: 100%;
-  display: grid; /* to make the child, the editor itself, take the full space */
-  max-height: calc(100% - 123px);
 }
 
 .footer .container-fluid {

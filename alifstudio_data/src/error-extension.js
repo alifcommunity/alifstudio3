@@ -1,4 +1,3 @@
-
 /**
  * All the logic is that we need a StateField extension
  * to be attached to the EditorState when creatting the
@@ -8,7 +7,7 @@
  */
 
 import { StateField, StateEffect } from "@codemirror/state";
-import { EditorView, Range, Decoration } from "@codemirror/view";
+import { EditorView, Decoration } from "@codemirror/view";
 
 // Effects can be attached to transactions to communicate with the extension
 export const addErrorEffect = StateEffect.define();
