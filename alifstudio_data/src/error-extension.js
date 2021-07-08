@@ -52,7 +52,7 @@ export function addErrors(errors, view) {
       class: "alif-code-error",
       attributes: { "data-error-message": err.msg },
     });
-    const line = view.state.doc.lineAt(err.line);
+    const line = view.state.doc.line(err.line);
     return strikeMark.range(line.from, line.to);
   });
 

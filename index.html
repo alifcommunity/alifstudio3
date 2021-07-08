@@ -196,6 +196,8 @@
     
     <script>
 
+      var SyntaxCheckTimer = 0;
+
       function alif_debug(message) {
 
         document.getElementById("id_debug").innerHTML = '<strong>' + message + '</strong>';
@@ -211,6 +213,7 @@
         const debug_r = JSON.parse(debug_json);
         document.getElementById("id_debug").innerHTML = '<strong>السطر ' + debug_r.line + ':</strong> ' + debug_r.msg;
 
+        ألف.نظف_من_الأخطاء();
         ألف.خطأ(debug_r.line, debug_r.msg);
       }
 
@@ -218,6 +221,10 @@
         
         // CodeMirror OnChange event
         webui_event("ثم_تغيير");
+
+        if (SyntaxCheckTimer)
+            window.clearTimeout(SyntaxCheckTimer);
+        SyntaxCheckTimer = window.setTimeout(function() { webui_event("فحص_الشيفرة");; }, 3000);
       }
       
   </script>
