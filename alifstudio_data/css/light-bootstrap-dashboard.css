@@ -465,7 +465,7 @@ body > .navbar-collapse[data-color="purple"]:after {
   min-height: calc(100% - 123px);
 }
 .main-panel > .footer {
-  border-top: 1px solid #e7e7e7;
+  border-top: 1px solid rgb(49, 53, 60);
 }
 .main-panel .navbar {
   margin-bottom: 0;
@@ -1513,8 +1513,8 @@ body > .navbar-collapse[data-color="purple"]:after {
 }
 
 .navbar-default {
-  background-color: rgba(255, 255, 255, 0.96);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgb(49, 53, 60);
+  border-bottom: 1px solid rgb(49, 53, 60);
 }
 .navbar-default .navbar-nav > li > a:not(.btn) {
   color: #9A9A9A;
@@ -1633,7 +1633,7 @@ body > .navbar-collapse[data-color="purple"]:after {
 }
 
 .footer {
-  background-color: #FFFFFF;
+  background-color: rgb(49, 53, 60);
   line-height: 20px;
 }
 .footer nav > ul {

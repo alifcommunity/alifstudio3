@@ -47,8 +47,14 @@ m4/lt~obsolete.m4
 # (which is called by configure script))
 Makefile
 
+# the users should do 'yarn build' to modify the modules code
 node_modules/
-dist/
 .cache/
 
+# We keep it so users can run IDE without using yarn
+# dist/
+
 *.exe
+
+alifstudio.alif.json
+alifstudio.alif.log

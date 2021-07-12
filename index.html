@@ -77,10 +77,10 @@
               </a>
             </li>
 
-            <li class="active-pro" id="خروج">
+            <li class="active-pro">
               <a href="javascript:;">
                 <i class="pe-7s-close-circle"></i>
-                <p>خروج</p>
+                <p id="خروج">خروج</p>
               </a>
             </li>
           </ul>
@@ -210,11 +210,16 @@
 
       function alif_debug_json(debug_json) {
 
-        const debug_r = JSON.parse(debug_json);
-        document.getElementById("id_debug").innerHTML = '<strong>السطر ' + debug_r.line + ':</strong> ' + debug_r.msg;
-
+        // Clean
         ألف.نظف_من_الأخطاء();
-        ألف.خطأ(debug_r.line, debug_r.msg);
+        document.getElementById("id_debug").innerHTML = '';
+
+        if(debug_json != ''){
+
+          const debug_r = JSON.parse(debug_json);
+          document.getElementById("id_debug").innerHTML = '<strong>السطر ' + debug_r.line + ':</strong> ' + debug_r.msg;
+          ألف.خطأ(debug_r.line, debug_r.msg);
+        }
       }
 
       function alif_code_OnChange() {
@@ -222,9 +227,10 @@
         // CodeMirror OnChange event
         webui_event("ثم_تغيير");
 
+        // Syntax check only
         if (SyntaxCheckTimer)
             window.clearTimeout(SyntaxCheckTimer);
-        SyntaxCheckTimer = window.setTimeout(function() { webui_event("فحص_الشيفرة");; }, 3000);
+        SyntaxCheckTimer = window.setTimeout(function() { webui_event("فحص_الشيفرة"); }, 1500);
       }
       
   </script>
