@@ -188,7 +188,7 @@
       function webui_ready() {
 
         // WebUI is ready
-        webui_debug(false);
+        webui_debug(true);
       }
     </script>
     <!-- ------------------------------------------------------------ -->
@@ -213,6 +213,8 @@
         // Clean
         ألف.نظف_من_الأخطاء();
         document.getElementById("id_debug").innerHTML = '';
+
+        debug_json = debug_json.trim();
 
         if(debug_json != ''){
 
