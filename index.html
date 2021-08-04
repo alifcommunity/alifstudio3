@@ -219,8 +219,11 @@
         if(debug_json != ''){
 
           const debug_r = JSON.parse(debug_json);
-          document.getElementById("id_debug").innerHTML = '<strong>السطر ' + debug_r.line + ':</strong> ' + debug_r.msg;
-          ألف.خطأ(debug_r.line, debug_r.msg);
+
+          let msg = decodeURIComponent(escape(window.atob(debug_r.msg.trim())));
+
+          document.getElementById("id_debug").innerHTML = '<strong>السطر ' + debug_r.line + ':</strong> ' + msg;
+          ألف.خطأ(debug_r.line, msg);
         }
       }
 
